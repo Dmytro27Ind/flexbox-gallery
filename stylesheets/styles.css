@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html,
+body,
+.flex__container {
+  height: 100%;
+}
+body {
+  overflow: hidden;
+  font-family: "Montserrat";
+  color: #fff8e3;
+  background-color: #1d1d1d;
+}
+.flex__container {
+  display: flex;
+  flex-direction: column;
+}
+.flex__header {
+  flex: 0 0 auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.header__text{
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    color: #ffd875;
+    padding: 0 20px;
+}
+.flex__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 1 1 auto;
+  position: relative;
+  overflow-x: auto;
+  padding: 0 5%;
+}
+.flex__element{
+    flex-basis: 26%;
+}
+.flex__element:hover{
+    transform: scale(1.05);
+}
+.element__photo{
+    width: 100%;
+    border-radius: 5px;
+}
+.element__text{
+    font-size: 22px;
+    text-align: center;
+    padding: 0 5px;
+    flex-basis: 80%;
+}
+.flex__rep{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 26%;
+    align-items: flex-end;
+}
+.flex__rep:hover{
+    transform: scale(1.05);
+}
+.rep__element{
+    flex-basis: 40%;
+}
+.flex__rep, .flex__element{
+    margin-bottom: 3%;
+    border: 1px solid #b4995585;
+    background-color: #333333;
+    border-radius: 5px;
+    margin-top: 1%;
+    transition: 150ms ease-in-out;
+    box-shadow: 10px 10px 10px 2px #111111;
+}
+.rep__element > .element__photo{
+    box-shadow: 4px 4px 10px 2px #1a1a1a;
+}
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+    .flex__content{
+        padding: 0 10%;
+    }
+}
+@media (max-width:900px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .flex__element, .flex__rep{
+        flex-basis: 40%;
+    }
+    .rep__element{
+        margin-top: 3%;
+    }
+    .header__text{
+        font-size: 35px;
+    }
+    .flex__content{
+        padding: 0 0;
+    }
+}
+@media (max-width:600px)  {
+    /* smartphones, Android phones, landscape iPhone, portrait tablets, portrait iPad */
+    .flex__element, .flex__rep{
+        flex-basis: 80%;
+    }
+    .rep__element{
+        margin-top: 3%;
+    }
+    .header__text{
+        font-size: 30px;
+    }
+    .flex__content{
+        padding: 0 0;
+    }
+}
